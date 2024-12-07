@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin -</title>
+    <script>
+        const checkSession = () => {
+            const userData = window.localStorage.getItem("userData")
+            if (userData == null) {
+                window.location.href = "index.html"
+            }
+            console.table(userData)
+            userData_json = JSON.parse(userData)
+
+            lblUsername = document.getElementById("lbl_username")
+            
+            lblUsername.textContent = "Hello, " + userData_json["username"] +
+                "! This is the landing page for the "+ userData_json["role"] + "!"
+        }
+        const handleLogout = () => {
+            event.preventDefault()
+            window.localStorage.removeItem("userData");
+            window.location.href = "index.html"
+        }
+        const username = () => {
+            userData = window.localStorage.getItem("userData")
+            if (userData) {
+                return userData
+            }
+        }
+    </script>
+</head>
+
+<body onload="checkSession()">
+    <form onsubmit="handleLogout()" method="post">
+        <label id="lbl_username" for="welcome">
+        </label>
+        <input type="submit" value="logout" onclick="handleLogout()">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightgray;
+        }
+
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .login-container label[type="role"] {
+            display: block;
+            margin-bottom: 5px;
+            color: red;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-container select[type="role"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #e00f0f;
+            border-radius: 5px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        // <script type="module">
+        // import "./scripts/session.js"
+        const getLocalStorage = () => {
+            return localStorage.getItem("userData");
+        }
+
+        const setLocalStorage = (username, role) => {
+            console.log("Saving user data...")
+            jsonData = {
+                "username": username,
+                "role": role
+            }
+            localStorage.setItem("userData", JSON.stringify(jsonData))
+        }
+        function handleSubmit() {
+            // console.clear()
+            valid_usernames = ["akas", "pravash", "admin"]
+            valid_passwords = ["password", "password", "password"]
+            event.preventDefault(); // Prevent the form from submitting
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const role = document.getElementById('role').value;
+            const data = {
+                'username': username,
+                'password': password,
+                'role': role,
+            }
+            if (username === null || username === "") {
+                alert("username cannot be null")
+                return
+            }
+            if (password === null || password === "") {
+                alert("password cannot be null")
+                return
+            }
+            console.table(data)
+            if (valid_usernames.includes(username) &&
+                valid_passwords.includes(password)) {
+                console.log("valid username", username)
+                console.log("valid password", password)
+                setLocalStorage(username, role)
+                // Redirect based on role
+                switch (role.toLowerCase()) {
+                    case 'admin':
+                        console.log('Redirecting to admin page')
+                        window.location.href = "admin.html"
+                        break
+                    case 'supervisor':
+                        console.log('Redirecting to admin page')
+                        window.location.href = "supervisor.html"
+                        break
+                    case 'clerk':
+                        console.log('Redirecting to admin page')
+                        window.location.href = "clerk.html"
+                        break
+                    default:
+                        break
+                }
+            } else {
+                const invalid_input = "Invalid Input. Go back to sleep"
+                console.log(invalid_input)
+                alert(invalid_input)
+                return
+            }
+            // alert('Form submitted!'); // Add your custom JavaScript code here 
+        } 
+    </script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <h3>Welcome to the autogen demo login page.<BR> Expect this page to undergo structural changes.</h3>
+        <form onsubmit="handleSubmit()" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label type="role" for="role">Role</label>
+            <!-- <input type="text" id="role" name="role" required> -->
+            <select type="role" id="role" name="role" required>
+                <option value="Admin" selected>Admin</option>
+                <option value="Clerk">Clerk</option>
+                <option value="Supervisor">Supervisor</option>
+            </select>
+
+            <input type="submit" value="Login" onclick="handleSubmit()">
+        </form>
+    </div>
+</body>
+
+</html>
