@@ -8,9 +8,9 @@ Labeled co-ordinates with id and bbox values - New document 2.csv
 Task - A. The processed  image is annotated with all the graphical objects identified with a color bounding box and marked with a unique ID B.  Corresponding file which describes every identified object ID . The ID objects are  identified as text or icons .  As an agent you have build and mark how the icons are associated with the text and obtain a complete description of the the Icon. the icons could graphical objects like edit box , check boxes , combo box and such other diverse objects.
 Provide an utility code snippet in Python using the Selenium library to select these elements based on the mapping of each Icon and the text . 
 
-Parses the object descriptions from the CSV file to identify mappings between icons and text elements.
-Uses Selenium to locate all these elements on the webpage.
-Demonstrates how to interact with identified elements (like edit boxes, combo boxes, etc.).
+    Parses the object descriptions from the CSV file to identify mappings between icons and text elements.
+    Uses Selenium to locate all these elements on the webpage.
+    Demonstrates how to interact with identified elements (like edit boxes, combo boxes, etc.).
 
 Provide me if any analysis as an code snippet .
 Provide me the tree structure and the names of the .py files to be created
