@@ -1,0 +1,42 @@
+Root: {}
+├── 0: {'id': '0', 'bbox': '0.14493322372436523,0.02186177670955658,0.3707776963710785,0.04795486479997635', 'type': 'text', 'content': '127.0.0.1:5500/site/autogen-demo/index.html', 'interactivity': False}
+├── 1: {'id': '1', 'bbox': '0.1645718812942505,0.07334273308515549,0.2710133492946625,0.09943582862615585', 'type': 'text', 'content': ' Overview - OpenAl....', 'interactivity': False}
+├── 2: {'id': '2', 'bbox': '0.4061272442340851,0.07193230092525482,0.516496479511261,0.09732016921043396', 'type': 'text', 'content': ' Branding Pitch for "...', 'interactivity': False}
+├── 3: {'id': '3', 'bbox': '0.46857815980911255,0.3392101526260376,0.5263158082962036,0.38504937291145325', 'type': 'text', 'content': 'Login', 'interactivity': False}
+├── 4: {'id': '4', 'bbox': '0.3884524703025818,0.42101550102233887,0.6060487031936646,0.4485190510749817', 'type': 'text', 'content': 'Expect this page to undergo structural changes.', 'interactivity': False}
+├── 5: {'id': '5', 'bbox': '0.37627652287483215,0.4668547213077545,0.4422623813152313,0.5021156668663025', 'type': 'text', 'content': 'Username:', 'interactivity': False}
+├── 6: {'id': '6', 'bbox': '0.3782403767108917,0.6537376642227173,0.4073055684566498,0.6882933974266052', 'type': 'text', 'content': 'Role', 'interactivity': False}
+├── 7: {'id': '7', 'bbox': '0.38027745485305786,0.6900667548179626,0.6173312067985535,0.7393860816955566', 'type': 'text', 'content': 'Admin', 'interactivity': True}
+├── 8: {'id': '8', 'bbox': '0.37953057885169983,0.7518695592880249,0.6165878772735596,0.8049349784851074', 'type': 'text', 'content': 'Login', 'interactivity': True}
+│   └── 14: {'id': '14', 'bbox': '0.00088063336443156,0.06631363183259964,0.023893119767308235,0.10245886445045471', 'type': 'text', 'content': '8', 'interactivity': True}
+├── 9: {'id': '9', 'bbox': '0.5208789110183716,0.05540771782398224,0.595420777797699,0.11183876544237137', 'type': 'text', 'content': ' AI Agents', 'interactivity': True}
+├── 10: {'id': '10', 'bbox': '0.596433699131012,0.05478021129965782,0.6854267716407776,0.11142332851886749', 'type': 'text', 'content': 'C Jupyter Server', 'interactivity': True}
+├── 11: {'id': '11', 'bbox': '0.28100162744522095,0.057629428803920746,0.3936188220977783,0.10810084640979767', 'type': 'text', 'content': ' HopFieldAI-AutoB....', 'interactivity': True}
+├── 12: {'id': '12', 'bbox': '0.05475587770342827,0.0006078511942178011,0.08203241974115372,0.05578499287366867', 'type': 'text', 'content': 'C', 'interactivity': True}
+├── 13: {'id': '13', 'bbox': '0.03655156493186951,0.05532645806670189,0.15522223711013794,0.11128251254558563', 'type': 'text', 'content': 'EikenTest[EXTERNA...', 'interactivity': True}
+├── 15: {'id': '15', 'bbox': '0.37938207387924194,0.5495344996452332,0.6258008480072021,0.5967704653739929', 'type': 'text', 'content': 'Password:', 'interactivity': True}
+├── 16: {'id': '16', 'bbox': '0.00020068587036803365,0.001736410427838564,0.025554513558745384,0.056348588317632675', 'type': 'text', 'content': 'F', 'interactivity': True}
+├── 17: {'id': '17', 'bbox': '0.3794664740562439,0.4038071632385254,0.6216199398040771,0.44265639781951904', 'type': 'text', 'content': 'Welcome to the autogen demo login page.', 'interactivity': True}
+├── 18: {'id': '18', 'bbox': '0.38027745485305786,0.6900667548179626,0.6173312067985535,0.7393860816955566', 'type': 'icon', 'content': 'a dropdown menu to select the "Admin" settings.', 'interactivity': True}
+├── 19: {'id': '19', 'bbox': '0.37953057885169983,0.7518695592880249,0.6165878772735596,0.8049349784851074', 'type': 'icon', 'content': 'a login function.', 'interactivity': True}
+├── 20: {'id': '20', 'bbox': '0.5208789110183716,0.05540771782398224,0.595420777797699,0.11183876544237137', 'type': 'icon', 'content': 'Al Agents.', 'interactivity': True}
+├── 21: {'id': '21', 'bbox': '0.596433699131012,0.05478021129965782,0.6854267716407776,0.11142332851886749', 'type': 'icon', 'content': 'Jupiter Server.', 'interactivity': True}
+├── 22: {'id': '22', 'bbox': '0.28100162744522095,0.057629428803920746,0.3936188220977783,0.10810084640979767', 'type': 'icon', 'content': 'Adding a new tab.', 'interactivity': True}
+├── 23: {'id': '23', 'bbox': '0.9115045070648193,0.0034561443608254194,0.9409176111221313,0.05656259134411812', 'type': 'icon', 'content': 'Music', 'interactivity': True}
+├── 24: {'id': '24', 'bbox': '0.8305248618125916,0.0068346839398145676,0.8628048300743103,0.05325351282954216', 'type': 'icon', 'content': 'a favorite or bookmark function.', 'interactivity': True}
+├── 25: {'id': '25', 'bbox': '0.3782636225223541,0.503754734992981,0.6289899349212646,0.5476365089416504', 'type': 'icon', 'content': 'a loading or progress bar.', 'interactivity': True}
+├── 26: {'id': '26', 'bbox': '0.8695509433746338,0.0019816344138234854,0.9019896388053894,0.05704542249441147', 'type': 'icon', 'content': 'Paste', 'interactivity': True}
+├── 27: {'id': '27', 'bbox': '0.05475587770342827,0.0006078511942178011,0.08203241974115372,0.05578499287366867', 'type': 'icon', 'content': 'Reload', 'interactivity': True}
+├── 28: {'id': '28', 'bbox': '0.08399135619401932,0.004534827079623938,0.10925790667533875,0.05275442823767662', 'type': 'icon', 'content': 'Home', 'interactivity': True}
+├── 29: {'id': '29', 'bbox': '0.9458844661712646,0.011868767440319061,0.9645992517471313,0.05201832577586174', 'type': 'icon', 'content': 'PowerPoint', 'interactivity': True}
+├── 30: {'id': '30', 'bbox': '0.03655156493186951,0.05532645806670189,0.15522223711013794,0.11128251254558563', 'type': 'icon', 'content': 'Eikentest@TextERNA.', 'interactivity': True}
+├── 31: {'id': '31', 'bbox': '0.026822086423635483,0.001716871396638453,0.05357666313648224,0.05437527224421501', 'type': 'icon', 'content': 'Forward', 'interactivity': True}
+├── 32: {'id': '32', 'bbox': '0.00088063336443156,0.06631363183259964,0.023893119767308235,0.10245886445045471', 'type': 'icon', 'content': 'App launcher', 'interactivity': True}
+├── 33: {'id': '33', 'bbox': '0.9729411602020264,0.00272334273904562,0.9959731101989746,0.06372828781604767', 'type': 'icon', 'content': 'More options', 'interactivity': True}
+├── 34: {'id': '34', 'bbox': '0.37938207387924194,0.5495344996452332,0.6258008480072021,0.5967704653739929', 'type': 'icon', 'content': 'a password input field.', 'interactivity': True}
+├── 35: {'id': '35', 'bbox': '0.00020068587036803365,0.001736410427838564,0.025554513558745384,0.056348588317632675', 'type': 'icon', 'content': 'Back', 'interactivity': True}
+├── 36: {'id': '36', 'bbox': '0.1158166155219078,0.007078088819980621,0.14637447893619537,0.05503857508301735', 'type': 'icon', 'content': 'Information or help.', 'interactivity': True}
+├── 37: {'id': '37', 'bbox': '0.9016419053077698,0.0023607907351106405,0.9110276103019714,0.056863393634557724', 'type': 'icon', 'content': 'Maximize window', 'interactivity': True}
+├── 38: {'id': '38', 'bbox': '0.3794664740562439,0.4038071632385254,0.6216199398040771,0.44265639781951904', 'type': 'icon', 'content': 'a welcome message.', 'interactivity': True}
+├── 39: {'id': '39', 'bbox': '0.37885260581970215,0.6008121371269226,0.6245160698890686,0.6425698399543762', 'type': 'icon', 'content': 'A vertical scrollbar.', 'interactivity': True}
+└── 40: {'id': '40', 'bbox': '0.16314095258712769,0.06935296952724457,0.17972038686275482,0.09701357036828995', 'type': 'icon', 'content': 'Hyperlink', 'interactivity': True}
