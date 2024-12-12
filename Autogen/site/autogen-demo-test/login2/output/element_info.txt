@@ -1,0 +1,12 @@
+Element Type: text
+Coordinates: x=0.14493322372436523, y=0.02186177670955658, width=0.22584447264671326, height=0.02609308809041977
+Interactivity: false
+Content: 127.0.0.1:5500/site/autogen-demo/index.html
+Identifier: 0
+---
+Element Type: text
+Coordinates: x=0.14493322372436523, y=0.02186177670955658, width=0.22584447264671326, height=0.02609308809041977
+Interactivity: false
+Content: 127.0.0.1:5500/site/autogen-demo/index.html
+Identifier: 0
+---
