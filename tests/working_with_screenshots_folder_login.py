@@ -1,7 +1,6 @@
 import unittest
 import time
 import os
-import logging
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -9,35 +8,16 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import HtmlTestRunner
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, 
-                    format='%(asctime)s - %(levelname)s - %(message)s',
-                    handlers=[
-                        logging.FileHandler('test_log.txt'),
-                        logging.StreamHandler()
-                    ])
-
-class ScreenshotTestCase(unittest.TestCase):
+class TestLogin(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        # Create screenshots directory with full path and logging
-        cls.screenshot_dir = os.path.abspath(os.path.join(os.getcwd(), 'test_screenshots'))
-        try:
-            os.makedirs(cls.screenshot_dir, exist_ok=True)
-            logging.info(f"Screenshot directory created/verified at: {cls.screenshot_dir}")
-        except Exception as e:
-            logging.error(f"Failed to create screenshot directory: {e}")
+        # Create screenshots directory if it doesn't exist
+        cls.screenshot_dir = os.path.join(os.getcwd(), 'test_screenshots')
+        os.makedirs(cls.screenshot_dir, exist_ok=True)
 
     def setUp(self):
-        # Set up Chrome WebDriver with additional options for reliability
-        chrome_options = webdriver.ChromeOptions()
-        # Uncomment if running headless
-        # chrome_options.add_argument("--headless")
-        
-        self.driver = webdriver.Chrome(options=chrome_options)
-        
-        # Maximize window to ensure full page visibility
-        self.driver.maximize_window()
+        # Set up Chrome WebDriver
+        self.driver = webdriver.Chrome()
         
         # Navigate to login page
         self.driver.get("http://127.0.0.1:5500/site/autogen-demo/index.html")
@@ -49,7 +29,7 @@ class ScreenshotTestCase(unittest.TestCase):
 
     def _save_screenshot(self, test_name):
         """
-        Save screenshot with comprehensive error handling and logging
+        Save screenshot with a meaningful name
         
         Args:
             test_name (str): Name of the test method
@@ -59,53 +39,11 @@ class ScreenshotTestCase(unittest.TestCase):
         filepath = os.path.join(self.screenshot_dir, filename)
         
         try:
-            # Verify directory exists and is writable
-            if not os.path.exists(self.screenshot_dir):
-                logging.error(f"Screenshot directory does not exist: {self.screenshot_dir}")
-                return
-            
-            if not os.access(self.screenshot_dir, os.W_OK):
-                logging.error(f"No write permissions for directory: {self.screenshot_dir}")
-                return
-            
-            # Attempt to save screenshot
             self.driver.save_screenshot(filepath)
-            
-            # Verify screenshot was created
-            if os.path.exists(filepath):
-                logging.info(f"Screenshot saved successfully: {filename}")
-                print(f"Screenshot saved: {filename}")
-            else:
-                logging.error(f"Screenshot save failed: {filename}")
-        
+            print(f"Screenshot saved: {filename}")
         except Exception as e:
-            logging.error(f"Screenshot save error: {e}")
-            # Additional debug information
-            logging.error(f"Current working directory: {os.getcwd()}")
-            logging.error(f"Absolute screenshot directory path: {self.screenshot_dir}")
-            logging.error(f"Full file path attempted: {filepath}")
+            print(f"Failed to save screenshot: {e}")
 
-    def run(self, result=None):
-        """
-        Override run method to capture screenshot for all tests
-        """
-        result = super().run(result)
-        
-        # Capture screenshot for every test case
-        test_name = self._testMethodName
-        self._save_screenshot(test_name)
-
-        # Capture additional screenshots for failures
-        if result and (len(result.failures) > 0 or len(result.errors) > 0):
-            if result.failures:
-                test_method_name = result.failures[-1][0].shortDescription() or str(result.failures[-1][0])
-            else:
-                test_method_name = result.errors[-1][0].shortDescription() or str(result.errors[-1][0])
-                self._save_screenshot(test_method_name)
-        
-        return result
-
-class TestLogin(ScreenshotTestCase):
     def test_valid_login_admin(self):
         driver = self.driver
         
@@ -147,10 +85,12 @@ class TestLogin(ScreenshotTestCase):
                 "Personalized message does not match expected format"
             )
 
-            logging.info("Login test completed successfully!")
+            print("Login test completed successfully!")
 
         except Exception as e:
-            logging.error(f"Test failed: {str(e)}")
+            # Capture screenshot on failure
+            self._save_screenshot(self._testMethodName)
+            print(f"Test failed: {str(e)}")
             raise
 
     def test_invalid_login(self):
@@ -175,31 +115,26 @@ class TestLogin(ScreenshotTestCase):
 
             # Wait and verify error message or no redirection
             try:
-                # Wait for error message element
                 error_message = WebDriverWait(driver, 5).until(
                     EC.presence_of_element_located((By.ID, "error_message"))
                 )
-                
-                # Assert that error message is displayed
                 self.assertTrue(error_message.is_displayed(), "Error message not shown")
-                logging.info("Invalid login test: Error message displayed successfully")
                 print("Invalid login test: Error message displayed successfully")
-
-            except Exception as e:
-                # If no specific error message, verify no URL change
+            except:
+                # Verify no URL change
                 self.assertIn("autogen-demo/index.html", driver.current_url, 
                               "Unexpected page navigation occurred")
-                logging.info("Invalid login test: No redirection occurred")
                 print("Invalid login test: No redirection occurred")
 
         except Exception as e:
-            logging.error(f"Invalid login test failed: {str(e)}")
+            # Capture screenshot on failure
+            self._save_screenshot(self._testMethodName)
+            print(f"Invalid login test failed: {str(e)}")
             raise
 
     def tearDown(self):
         # Close browser
-        if self.driver:
-            self.driver.quit()
+        self.driver.quit()
 
 if __name__ == "__main__":
     unittest.main(

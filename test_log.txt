@@ -1,0 +1,27 @@
+2024-12-14 06:57:07,559 - INFO - Screenshot directory created/verified at: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 06:57:10,633 - INFO - Login test completed successfully!
+2024-12-14 06:59:35,092 - INFO - Screenshot directory created/verified at: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 06:59:38,361 - INFO - Login test completed successfully!
+2024-12-14 07:47:25,443 - INFO - Screenshot directory created/verified at: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 07:47:30,681 - INFO - Invalid login test: No redirection occurred
+2024-12-14 07:47:36,043 - INFO - Login test completed successfully!
+2024-12-14 07:59:23,871 - INFO - Screenshot directory created/verified at: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 07:59:26,798 - INFO - Invalid login test: No redirection occurred
+2024-12-14 07:59:31,761 - INFO - Login test completed successfully!
+2024-12-14 08:05:55,759 - INFO - Screenshot directory created/verified at: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 08:05:58,670 - INFO - Invalid login test: No redirection occurred
+2024-12-14 08:06:04,968 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959E89A0D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fb010cdec3de0fab84568b455cee3932/screenshot
+2024-12-14 08:06:09,004 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959E898410>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fb010cdec3de0fab84568b455cee3932/screenshot
+2024-12-14 08:06:13,088 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959DFEB100>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fb010cdec3de0fab84568b455cee3932/screenshot
+2024-12-14 08:06:17,139 - ERROR - Screenshot save error: HTTPConnectionPool(host='localhost', port=54683): Max retries exceeded with url: /session/fb010cdec3de0fab84568b455cee3932/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959DFEAEA0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2024-12-14 08:06:17,141 - ERROR - Current working directory: C:\Users\prava\source\Selenium_project
+2024-12-14 08:06:17,142 - ERROR - Absolute screenshot directory path: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 08:06:17,142 - ERROR - Full file path attempted: C:\Users\prava\source\Selenium_project\test_screenshots\test_invalid_login_20241214_080600.png
+2024-12-14 08:06:19,766 - INFO - Login test completed successfully!
+2024-12-14 08:06:25,957 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959DFAF9B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c5b6720177e1d16a18a14194e0598f62/screenshot
+2024-12-14 08:06:29,997 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959DFAFAC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c5b6720177e1d16a18a14194e0598f62/screenshot
+2024-12-14 08:06:34,040 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959DFAFF00>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c5b6720177e1d16a18a14194e0598f62/screenshot
+2024-12-14 08:06:38,094 - ERROR - Screenshot save error: HTTPConnectionPool(host='localhost', port=54713): Max retries exceeded with url: /session/c5b6720177e1d16a18a14194e0598f62/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001959E8CC270>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2024-12-14 08:06:38,096 - ERROR - Current working directory: C:\Users\prava\source\Selenium_project
+2024-12-14 08:06:38,097 - ERROR - Absolute screenshot directory path: C:\Users\prava\source\Selenium_project\test_screenshots
+2024-12-14 08:06:38,098 - ERROR - Full file path attempted: C:\Users\prava\source\Selenium_project\test_screenshots\test_valid_login_admin_20241214_080621.png

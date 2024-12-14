@@ -87,21 +87,20 @@ class ScreenshotTestCase(unittest.TestCase):
 
     def run(self, result=None):
         """
-        Override run method to capture screenshot for all tests
+        Override run method to capture screenshot on test failure
         """
         result = super().run(result)
         
-        # Capture screenshot for every test case
-        test_name = self._testMethodName
-        self._save_screenshot(test_name)
-
-        # Capture additional screenshots for failures
+        # Check if the test failed
         if result and (len(result.failures) > 0 or len(result.errors) > 0):
+            # Get the last test method name that failed
             if result.failures:
                 test_method_name = result.failures[-1][0].shortDescription() or str(result.failures[-1][0])
             else:
                 test_method_name = result.errors[-1][0].shortDescription() or str(result.errors[-1][0])
-                self._save_screenshot(test_method_name)
+            
+            # Save screenshot
+            self._save_screenshot(test_method_name)
         
         return result
 
